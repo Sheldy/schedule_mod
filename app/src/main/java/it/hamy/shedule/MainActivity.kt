@@ -13,6 +13,9 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.select.Elements
 import java.nio.charset.Charset
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,9 +47,12 @@ class MainActivity : AppCompatActivity() {
                 // Парсинг расписания
                 val scheduleList = parseSchedule(doc)
 
+                // Группировка расписания по дням
+                val groupedSchedule = groupScheduleByDay(scheduleList)
+
                 // Обновление UI
                 withContext(Dispatchers.Main) {
-                    scheduleAdapter.updateSchedule(scheduleList)
+                    scheduleAdapter.updateSchedule(groupedSchedule)
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
@@ -69,14 +75,20 @@ class MainActivity : AppCompatActivity() {
                 currentDay = dayCell.text()
             }
 
-            val timeCell = row.select("td.hd").firstOrNull()?.text()
-            val subjectCell = row.select("td.ur").text()
+            val timeCell = row.select("td.hd").firstOrNull { it.attr("rowspan").isEmpty() }?.text()
+            val subjectCell = row.select("a.z1").text()
+            val teacherCell = row.select("a.z3").text() // Предполагается, что есть класс для преподавателя
+            val roomCell = row.select("a.z2").text() // Предполагается, что есть класс для кабинета
 
             if (!timeCell.isNullOrEmpty() && !subjectCell.isNullOrEmpty()) {
-                scheduleList.add(ScheduleItem(currentDay, timeCell, subjectCell))
+                scheduleList.add(ScheduleItem(currentDay, timeCell, subjectCell, teacherCell, roomCell))
             }
         }
 
         return scheduleList
+    }
+
+    private fun groupScheduleByDay(scheduleList: List<ScheduleItem>): Map<String, List<ScheduleItem>> {
+        return scheduleList.groupBy { it.day }
     }
 }

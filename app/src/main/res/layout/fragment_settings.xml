@@ -12,6 +12,7 @@
         android:text="Текущая группа: ..."
         android:textSize="18sp"
         android:layout_marginBottom="32dp"
+        android:padding="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -20,19 +21,29 @@
         android:text="Сменить группу"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="?attr/colorPrimary"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="16dp"
-        android:padding="12dp"
-        android:background="@drawable/rounded_button" />
+        android:layout_marginBottom="32dp"
+        android:padding="12dp"/>
 
     <Button
         android:id="@+id/refreshButton"
         android:text="Обновить расписание"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="?attr/colorSecondary"
-        android:textColor="@android:color/white"
-        android:padding="12dp"
-        android:background="@drawable/rounded_button" />
+        android:layout_marginBottom="32dp"
+        android:padding="12dp" />
+
+    <TextView
+        android:id="@+id/versionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Версия: "
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/githubButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Открыть GitHub"/>
 </LinearLayout>

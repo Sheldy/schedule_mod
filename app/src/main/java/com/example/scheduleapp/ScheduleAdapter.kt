@@ -1,4 +1,4 @@
-package it.hamy.shedule
+package it.hamy.schedule
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import it.hamy.schedule.R
 import java.text.SimpleDateFormat
 import java.util.*
 

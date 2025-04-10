@@ -1,4 +1,4 @@
-package it.hamy.shedule
+package it.hamy.schedule
 
 data class ScheduleItem(
     val day: String,

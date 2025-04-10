@@ -4,7 +4,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="8dp"
-    android:background="@color/white"
     android:layout_marginBottom="8dp"
     android:elevation="1dp">
 
@@ -25,13 +24,13 @@
         android:id="@+id/teacherTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textColor="@android:color/darker_gray" />
+        android:textSize="14sp"/>
+
 
     <TextView
         android:id="@+id/roomTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textColor="@android:color/darker_gray" />
+        android:textSize="14sp"/>
+
 </LinearLayout>

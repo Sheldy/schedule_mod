@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:gravity="top|center_horizontal">
+
+    <TextView
+        android:id="@+id/groupText"
+        android:text="Текущая группа: ..."
+        android:textSize="18sp"
+        android:layout_marginBottom="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/changeGroupButton"
+        android:text="Сменить группу"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_button" />
+
+    <Button
+        android:id="@+id/refreshButton"
+        android:text="Обновить расписание"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="?attr/colorSecondary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:background="@drawable/rounded_button" />
+</LinearLayout>

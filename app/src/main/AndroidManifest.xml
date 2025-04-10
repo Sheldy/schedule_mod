@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 
     <application
@@ -14,17 +15,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Shedule"
+        android:theme="@style/Theme.schedule"
         tools:targetApi="31">
+
+        <!-- Выбор группы — первая запускаемая активность -->
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.GroupSelectActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Главная активность с расписанием -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

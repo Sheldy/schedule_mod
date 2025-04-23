@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.ResultsActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -24,8 +27,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- Главная активность с расписанием -->
+        </activity> <!-- Главная активность с расписанием -->
         <activity android:name=".ui.GroupSelectActivity" />
         <activity
             android:name=".MainActivity"

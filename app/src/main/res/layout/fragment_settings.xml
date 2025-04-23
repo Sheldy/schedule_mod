@@ -32,6 +32,14 @@
         android:layout_marginBottom="32dp"
         android:padding="12dp" />
 
+    <Button
+        android:id="@+id/resultsButton"
+        android:text="Итоги группы"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:padding="12dp" />
+
     <TextView
         android:id="@+id/versionText"
         android:layout_width="wrap_content"

@@ -40,6 +40,14 @@ class SettingsFragment : Fragment() {
             requireActivity().recreate()
         }
 
+
+
+        binding.resultsButton.setOnClickListener {
+            val intent = Intent(requireContext(), ResultsActivity::class.java)
+            startActivity(intent)
+        }
+
+
         // Устанавливаем текст версии
         setAppVersion()
 
